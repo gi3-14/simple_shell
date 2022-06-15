@@ -1,0 +1,98 @@
+.\" hsh man page
+
+.DT simple shell 1
+.SH NAME
+.NM Simple shell
+.NM UNIX command interpreter().
+.SH SYNOPSIS
+.NM
+.OP OPTIONS              \" [-abcd]
+.OP string || file         \" [-a path]
+.SH DESCRIPTION          \" Section Header - required - don't modify
+
+.TH SHELL "2.0" "14 April 2021" "shell man page"
+
+.SH NAME
+hsh -  This  simple  shell is a command-line interpreter that provides an interface who takes, from the stañndard input,functions by commmands
+
+.SH DESCRIPTION
+This shell split the enter from the user in tokens, the first token is a argument, and after compare whit a list of built-in programs and after check the $PATH and execute this command if can be found the other tokens are treated as options.
+
+
+.SH SOME OPTIONS
+shearches in the PATH, has built-ins commands and uses an environment to execute these commands
+
+.NM /bin/ls
+- lists contents of the current directory.
+.PP
+.NM /bin/ls -l
+- Lists contents of the current directory in long format.
+.PP
+.NM /bin/ls -l -a
+- Lists all the contents of the current directory in long format, even those with . and ..
+.PP
+.NM /bin/ls -la
+- Makes the same as /bin/ls -l -a
+.PP
+.NM /bin/pwd
+- Prints the name of the current working directory
+.PP
+.NM ls
+- lists contents of the current directory.
+.PP
+.NM ls -l
+- Lists contents of the current directory in long format.
+.PP
+.NM ls -l -a
+- Lists all the contents of the current directory in long format, even those with . and ..
+.PP
+.NM ls -la
+- Makes the same as ls -l -a
+.PP
+.NM pwd
+- Prints the name of the current working directory
+.NM exit
+- Exit from the shell
+.PP
+.NM cat
+- Concatenate and print files writing them to the standard output.
+.PP
+.NM cat
+- Concatenate and print files writing them to the standard output.
+
+.SH SOME EXAMPLES
+
+$ ./hsh
+ ($) ls
+ AUTHORS    execution.c  main.c        register.c  split.c
+ environ.c  hsh          my_getline.c  shell.h     tools.c
+ ($)
+ ($) exit
+ $
+
+$ ./hsh
+ ($) ls -l
+
+-rw-rw-r-- 1 user user  1810 abr  9 18:37 my_getline.c
+
+-rw-rw-r-- 1 user user  1030 abr  9 18:37 register.c
+
+-rw-rw-r-- 1 user user  1525 abr  9 18:37 shell.h
+
+-rw-rw-r-- 1 user user   947 abr  9 18:37 split.c
+
+-rw-rw-r-- 1 user user  2205 abr  9 18:37 tools.c
+
+ ($)
+ ($) exit
+ $
+
+$ ./hsh
+ ($) cat file
+ this is my file
+ ($)
+ ($) exit
+ $
+
+.SH AUTHORS
+* Idehen Osariemen
