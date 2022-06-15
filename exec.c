@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 /**
  * exec - Function where each process that a child creates and executes
  * the commands
